@@ -1,5 +1,4 @@
 from backtrader.cerebro import OptReturn
-import matplotlib
 from datetime import datetime
 import pandas as pd
 
@@ -95,10 +94,8 @@ if __name__ == '__main__':
 
     #results_df = pd.read_csv('data\\results\\backtesting_results.csv', index_col=0, parse_dates=['start_date', 'end_date'])
 
-    for run in opt_runs:
-       
+    for run in opt_runs:  
         for strategy in run:
-            
             strat_strings = (str(strategy).split('.', 2))
             strat_name = strat_strings[0][1:]
             parameters = strategy.params._getitems() 
